@@ -43,6 +43,19 @@ Authenticate Wrangler, then run:
 npm run deploy
 \`\`\`
 
+### Cloudflare Workers Builds
+
+This project uses **Vinext/Vite**, not the OpenNext adapter. In the Cloudflare
+dashboard, open the Worker and set **Settings → Build** to:
+
+- Root directory: `/`
+- Build command: `npm run build`
+- Deploy command: `npm run deploy:worker`
+- Non-production branch deploy command: `npm run preview:worker`
+
+Do not use `npx @opennextjs/cloudflare build`; it expects output from
+`next build` in `.next`, while this project emits its Worker to `dist/server`.
+
 To deploy from GitHub Actions, add \`CLOUDFLARE_API_TOKEN\` and
 \`CLOUDFLARE_ACCOUNT_ID\` as repository secrets before configuring the
 deployment workflow.
