@@ -55,7 +55,7 @@ export default function SupportPage() {
 
       <nav className="legal-nav shell" aria-label="Support navigation">
         <a className="brand" href="/" aria-label="Selah home">
-          <img src="/selah-logo.png" alt="" width="1024" height="1024" />
+          <img src="/selah-logo.webp" alt="" width="512" height="512" />
           <span>SELAH</span>
         </a>
         <a className="legal-back" href="/">
@@ -77,7 +77,7 @@ export default function SupportPage() {
           </p>
         </div>
         <div className="support-mark" aria-hidden="true">
-          <img src="/selah-logo.png" alt="" width="1024" height="1024" />
+          <img src="/selah-logo.webp" alt="" width="512" height="512" />
         </div>
       </header>
 

@@ -6,9 +6,9 @@ export const metadata: Metadata = {
   description:
     "A daily devotional companion that helps you pause, open a physical Bible, reflect, and grow.",
   icons: {
-    icon: "/selah-logo.png",
-    shortcut: "/selah-logo.png",
-    apple: "/selah-logo.png",
+    icon: "/selah-logo.webp",
+    shortcut: "/selah-logo.webp",
+    apple: "/selah-logo.webp",
   },
 };
 

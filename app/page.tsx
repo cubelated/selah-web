@@ -60,7 +60,7 @@ export default function Home() {
 
       <nav className="nav shell" aria-label="Primary navigation">
         <a className="brand" href="#top" aria-label="Selah home">
-          <img src="/selah-logo.png" alt="" width="1024" height="1024" />
+          <img src="/selah-logo.webp" alt="" width="512" height="512" />
           <span>SELAH</span>
         </a>
 
@@ -123,7 +123,7 @@ export default function Home() {
             <div className="logo-stage">
               <div className="logo-glow" aria-hidden="true" />
               <img
-                src="/selah-logo.png"
+                src="/selah-logo.webp"
                 alt="Selah seedling and path icon"
                 width="1024"
                 height="1024"
@@ -217,7 +217,7 @@ export default function Home() {
             <div className="growth-ring ring-one" aria-hidden="true" />
             <div className="growth-ring ring-two" aria-hidden="true" />
             <img
-              src="/selah-logo.png"
+              src="/selah-logo.webp"
               alt="A gold seedling growing beside a path"
               width="1024"
               height="1024"
@@ -287,7 +287,7 @@ export default function Home() {
 
       <section className="final-cta shell" id="coming-soon">
         <div className="cta-sprout" aria-hidden="true">
-          <img src="/selah-logo.png" alt="" width="1024" height="1024" />
+          <img src="/selah-logo.webp" alt="" width="512" height="512" />
         </div>
         <div className="cta-content">
           <span>SELAH IS GROWING</span>
@@ -304,7 +304,7 @@ export default function Home() {
 
       <footer className="footer shell">
         <a className="brand" href="#top" aria-label="Selah home">
-          <img src="/selah-logo.png" alt="" width="1024" height="1024" />
+          <img src="/selah-logo.webp" alt="" width="512" height="512" />
           <span>SELAH</span>
         </a>
         <div className="footer-links" aria-label="Selah resources">
