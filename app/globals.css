@@ -2023,11 +2023,11 @@ a {
 @keyframes section-reveal {
   from {
     opacity: 0;
-    transform: translateY(28px);
+    translate: 0 28px;
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    translate: 0 0;
   }
 }
 
@@ -2137,6 +2137,7 @@ a {
     filter: none !important;
     animation: none !important;
     transform: none !important;
+    translate: none !important;
   }
 
   .phone {
