@@ -52,6 +52,23 @@ const principles = [
   "Designed to support—not replace—Scripture",
 ];
 
+function GooglePlayIcon({ size = 18 }: { size?: number }) {
+  return (
+    <svg
+      className="google-play-icon"
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+    >
+      <path fill="#00d7fe" d="M3.4 2.2c-.25.3-.4.72-.4 1.22v17.16c0 .48.15.9.4 1.2L13.14 12 3.4 2.2Z" />
+      <path fill="#ffce00" d="m16.28 8.85-3.14 3.15 3.14 3.15 3.78-2.15c1.25-.71 1.25-1.29 0-2l-3.78-2.15Z" />
+      <path fill="#00f076" d="m3.4 2.2 9.74 9.8 3.14-3.15L5.65 2.82c-.9-.51-1.72-.62-2.25-.62Z" />
+      <path fill="#f63448" d="m3.4 21.8 9.74-9.8 3.14 3.15-10.63 6.03c-.9.51-1.72.62-2.25.62Z" />
+    </svg>
+  );
+}
+
 export default function Home() {
   return (
     <main>
@@ -77,8 +94,8 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Get Selah
-          <ArrowRight size={16} aria-hidden="true" />
+          <GooglePlayIcon size={17} />
+          Google Play
         </a>
       </nav>
 
@@ -86,28 +103,35 @@ export default function Home() {
         <div className="hero-copy">
           <div className="eyebrow">
             <Sparkles size={15} aria-hidden="true" />
-            A quieter way to meet with God
+            A guided rhythm for time with God
           </div>
 
           <h1>
             Pause the noise.
-            <span>Make room for what matters.</span>
+            <span>Return to Scripture.</span>
           </h1>
 
           <p className="hero-description">
-            Selah is a daily devotional companion that guides you into
-            Scripture, reflection, and prayer—then gets out of the way.
+            Selah gently guides you through arriving, gratitude, Bible
+            reading, reflection, and prayer—without replacing the Bible in your
+            hands.
           </p>
 
           <div className="hero-actions">
-            <a className="button" href="#demo">
-              Watch the demo
-              <Play size={17} aria-hidden="true" fill="currentColor" />
+            <a
+              className="button"
+              href="https://play.google.com/store/apps/details?id=com.cubelated.selah"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download Selah on Google Play"
+            >
+              <GooglePlayIcon size={19} />
+              Download on Google Play
             </a>
-            <p>
-              <span className="status-dot" aria-hidden="true" />
-              Available on Google Play
-            </p>
+            <a className="button button-secondary" href="#demo">
+              <Play size={17} aria-hidden="true" fill="currentColor" />
+              Watch the demo
+            </a>
           </div>
         </div>
 
@@ -196,8 +220,8 @@ export default function Home() {
           </div>
           <h2>From distraction to devotion.</h2>
           <p>
-            A thoughtful path through four moments, designed to feel less like
-            completing a task and more like entering a quiet space.
+            Four intentional moments that guide your attention toward
+            Scripture—not another checklist to complete.
           </p>
         </div>
 
@@ -224,11 +248,11 @@ export default function Home() {
               <Play size={15} aria-hidden="true" fill="currentColor" />
               See Selah in practice
             </div>
-            <h2>A guided pause, from arrival to prayer.</h2>
+            <h2>See the whole devotional rhythm.</h2>
             <p>
-              Watch a complete Selah session unfold—from preparing your Bible
-              and checking in, to reading, reflecting, praying, and carrying
-              one thought into the day.
+              Follow a complete Selah session—from preparing your Bible and
+              arriving quietly to reading, reflecting, praying, and carrying
+              one truth into your day.
             </p>
             <a
               className="demo-link"
@@ -335,10 +359,10 @@ export default function Home() {
           <img src="/selah-logo.webp" alt="" width="512" height="512" />
         </div>
         <div className="cta-content">
-          <span>SELAH IS GROWING</span>
-          <h2>A quiet place for your daily walk.</h2>
+          <span>NOW ON GOOGLE PLAY</span>
+          <h2>Make room for Scripture today.</h2>
           <p>
-            Selah is now available for Android. Begin a guided devotional that
+            Download Selah for Android and begin a guided devotional rhythm that
             leads you away from the screen and back to your own Bible.
           </p>
         </div>
@@ -349,7 +373,8 @@ export default function Home() {
           rel="noopener noreferrer"
           aria-label="Get Selah on Google Play"
         >
-          Get it on Google Play
+          <GooglePlayIcon size={19} />
+          Download on Google Play
         </a>
       </section>
 
