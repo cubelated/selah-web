@@ -9,6 +9,10 @@
   --foreground: #f6f3f0;
   --muted: #aaa8a4;
   --border: rgba(246, 243, 240, 0.1);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --motion-fast: 180ms;
+  --motion-medium: 420ms;
 }
 
 * {
@@ -21,6 +25,7 @@ html {
 
 body {
   margin: 0;
+  overflow-x: clip;
   background: var(--background);
   color: var(--foreground);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
@@ -1852,5 +1857,294 @@ a {
 
   .demo-frame {
     width: min(100%, 350px);
+  }
+}
+
+
+/* Interaction, accessibility, and motion polish */
+::selection {
+  background: rgba(249, 221, 128, 0.28);
+  color: var(--foreground);
+}
+
+:where(section[id]) {
+  scroll-margin-top: 112px;
+}
+
+:where(a, button, [tabindex]):focus-visible {
+  outline: 3px solid rgba(249, 221, 128, 0.48);
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+
+.nav {
+  position: sticky;
+  top: 0;
+  background: linear-gradient(180deg, rgba(17, 18, 22, 0.92), rgba(17, 18, 22, 0.72));
+  box-shadow: 0 1px 0 var(--border);
+  backdrop-filter: blur(18px) saturate(130%);
+  -webkit-backdrop-filter: blur(18px) saturate(130%);
+  animation: nav-enter 600ms var(--ease-out) both;
+}
+
+.brand,
+.brand img,
+.button svg,
+.feature-icon,
+.demo-frame {
+  transition-duration: var(--motion-fast);
+  transition-timing-function: var(--ease-standard);
+}
+
+.brand {
+  transition-property: color;
+}
+
+.brand img {
+  transition-property: transform, filter;
+}
+
+.nav-links a,
+.footer-links a,
+.support-footer-links a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+.nav-links a::after,
+.footer-links a::after,
+.support-footer-links a::after {
+  position: absolute;
+  right: 0;
+  bottom: 7px;
+  left: 0;
+  height: 1px;
+  content: "";
+  background: var(--primary);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--motion-fast) var(--ease-out);
+}
+
+.button {
+  cursor: pointer;
+  touch-action: manipulation;
+  transition-timing-function: var(--ease-out);
+}
+
+.button svg {
+  transition-property: transform;
+}
+
+.button:active {
+  transform: translateY(0) scale(0.98);
+  transition-duration: 80ms;
+}
+
+.feature-icon {
+  transition-property: transform, border-color, background, color;
+}
+
+.demo-frame {
+  transition-property: transform, border-color, box-shadow;
+  transition-duration: 260ms;
+  transition-timing-function: var(--ease-out);
+}
+
+.demo-frame:focus-within {
+  border-color: rgba(249, 221, 128, 0.45);
+  box-shadow:
+    0 42px 100px rgba(0, 0, 0, 0.55),
+    0 0 0 4px rgba(249, 221, 128, 0.08);
+}
+
+.demo-video iframe {
+  display: block;
+}
+
+.demo-link {
+  min-height: 44px;
+  touch-action: manipulation;
+}
+
+.hero-copy > * {
+  animation: hero-rise 760ms var(--ease-out) both;
+}
+
+.hero-copy > :nth-child(1) {
+  animation-delay: 80ms;
+}
+
+.hero-copy > :nth-child(2) {
+  animation-delay: 150ms;
+}
+
+.hero-copy > :nth-child(3) {
+  animation-delay: 220ms;
+}
+
+.hero-visual {
+  animation: hero-visual-enter 920ms var(--ease-out) 220ms both;
+}
+
+@keyframes nav-enter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-visual-enter {
+  from {
+    opacity: 0;
+    filter: blur(5px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+@keyframes section-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@supports (animation-timeline: view()) {
+  .manifesto-grid,
+  .section-heading,
+  .feature-card,
+  .demo-grid,
+  .scripture-grid,
+  .values > *,
+  .final-cta {
+    animation: section-reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 8% cover 28%;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .brand:hover {
+    color: var(--primary);
+  }
+
+  .brand:hover img {
+    filter: drop-shadow(0 8px 18px rgba(249, 221, 128, 0.2));
+    transform: translateY(-2px) rotate(-2deg);
+  }
+
+  .nav-links a:hover::after,
+  .footer-links a:hover::after,
+  .support-footer-links a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  .button:hover svg {
+    transform: translateX(3px);
+  }
+
+  .feature-card:hover .feature-icon {
+    border-color: rgba(249, 221, 128, 0.36);
+    background: rgba(249, 221, 128, 0.12);
+    transform: translateY(-3px) rotate(-2deg);
+  }
+
+  .demo-frame:hover {
+    border-color: rgba(249, 221, 128, 0.26);
+    box-shadow: 0 44px 105px rgba(0, 0, 0, 0.56);
+    transform: translateY(-6px);
+  }
+}
+
+@media (hover: none) {
+  .button:hover {
+    background: var(--primary);
+    box-shadow: 0 14px 40px rgba(249, 221, 128, 0.12);
+    transform: none;
+  }
+
+  .button-light:hover {
+    background: #17181c;
+    box-shadow: none;
+  }
+
+  .feature-card:hover {
+    border-color: var(--border);
+    background: var(--surface);
+    transform: none;
+  }
+
+  .feature-card:hover::after {
+    transform: none;
+  }
+}
+
+@media (max-width: 720px) {
+  :where(section[id]) {
+    scroll-margin-top: 94px;
+  }
+
+  .nav .button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .hero-actions .button {
+    min-width: min(100%, 230px);
+  }
+
+  .footer-links a,
+  .support-footer-links a {
+    padding-inline: 4px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav,
+  .hero-copy > *,
+  .hero-visual,
+  .manifesto-grid,
+  .section-heading,
+  .feature-card,
+  .demo-grid,
+  .scripture-grid,
+  .values > *,
+  .final-cta {
+    opacity: 1 !important;
+    filter: none !important;
+    animation: none !important;
+    transform: none !important;
+  }
+
+  .phone {
+    animation: none !important;
+    transform: rotate(1deg);
+  }
+
+  .wave i {
+    animation: none !important;
   }
 }
