@@ -1,5 +1,4 @@
 import {
-  ArrowDown,
   ArrowRight,
   BookOpen,
   Check,
@@ -8,6 +7,7 @@ import {
   Heart,
   Leaf,
   Pause,
+  Play,
   PenLine,
   ShieldCheck,
   Sparkles,
@@ -67,6 +67,7 @@ export default function Home() {
         <div className="nav-links">
           <a href="#why-selah">Why Selah</a>
           <a href="#journey">The journey</a>
+          <a href="#demo">Demo</a>
           <a href="#values">Our values</a>
         </div>
 
@@ -99,9 +100,9 @@ export default function Home() {
           </p>
 
           <div className="hero-actions">
-            <a className="button" href="#journey">
-              See how Selah works
-              <ArrowDown size={18} aria-hidden="true" />
+            <a className="button" href="#demo">
+              Watch the demo
+              <Play size={17} aria-hidden="true" fill="currentColor" />
             </a>
             <p>
               <span className="status-dot" aria-hidden="true" />
@@ -213,6 +214,45 @@ export default function Home() {
               <p>{description}</p>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="demo-section" id="demo">
+        <div className="shell demo-grid">
+          <div className="demo-copy">
+            <div className="eyebrow">
+              <Play size={15} aria-hidden="true" fill="currentColor" />
+              See Selah in practice
+            </div>
+            <h2>A guided pause, from arrival to prayer.</h2>
+            <p>
+              Watch a complete Selah session unfold—from preparing your Bible
+              and checking in, to reading, reflecting, praying, and carrying
+              one thought into the day.
+            </p>
+            <a
+              className="demo-link"
+              href="https://youtube.com/shorts/Iv-_ad13A6Y?feature=share"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Watch on YouTube
+              <ArrowRight size={17} aria-hidden="true" />
+            </a>
+          </div>
+
+          <div className="demo-frame">
+            <div className="demo-video">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/Iv-_ad13A6Y?rel=0"
+                title="Selah guided devotional session demo"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </div>
+          </div>
         </div>
       </section>
 
