@@ -70,8 +70,13 @@ export default function Home() {
           <a href="#values">Our values</a>
         </div>
 
-        <a className="button button-small" href="#coming-soon">
-          Follow the journey
+        <a
+          className="button button-small"
+          href="https://play.google.com/store/apps/details?id=com.cubelated.selah"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Get Selah
           <ArrowRight size={16} aria-hidden="true" />
         </a>
       </nav>
@@ -100,7 +105,7 @@ export default function Home() {
             </a>
             <p>
               <span className="status-dot" aria-hidden="true" />
-              Thoughtfully in development
+              Available on Google Play
             </p>
           </div>
         </div>
@@ -293,13 +298,19 @@ export default function Home() {
           <span>SELAH IS GROWING</span>
           <h2>A quiet place for your daily walk.</h2>
           <p>
-            Selah is being built in public for Android and the web. Follow the
-            journey as each part takes root.
+            Selah is now available for Android. Begin a guided devotional that
+            leads you away from the screen and back to your own Bible.
           </p>
         </div>
-        <span className="button button-light" aria-label="Selah is coming soon to Android and web">
-          Android + web · Coming soon
-        </span>
+        <a
+          className="button button-light"
+          href="https://play.google.com/store/apps/details?id=com.cubelated.selah"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Get Selah on Google Play"
+        >
+          Get it on Google Play
+        </a>
       </section>
 
       <footer className="footer shell">
