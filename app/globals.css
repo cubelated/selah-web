@@ -2149,3 +2149,202 @@ a {
     animation: none !important;
   }
 }
+
+
+/* Copy, CTA, and spacing refinements */
+.google-play-icon {
+  display: block;
+  flex: 0 0 auto;
+}
+
+.button-secondary {
+  border-color: rgba(249, 221, 128, 0.28);
+  background: rgba(249, 221, 128, 0.035);
+  color: var(--foreground);
+  box-shadow: none;
+}
+
+.button-secondary:hover {
+  border-color: rgba(249, 221, 128, 0.52);
+  background: rgba(249, 221, 128, 0.1);
+  box-shadow: none;
+}
+
+.hero {
+  gap: 56px;
+  padding-block: 60px 96px;
+}
+
+.hero-description {
+  max-width: 590px;
+  margin-top: 24px;
+}
+
+.hero-actions {
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.hero-actions .button {
+  min-height: 54px;
+  padding-inline: 22px;
+}
+
+.manifesto {
+  padding-block: 104px;
+}
+
+.journey,
+.demo-section {
+  padding-block: 112px;
+}
+
+.section-heading > p,
+.scripture-copy > p,
+.values-copy > p {
+  margin-top: 20px;
+}
+
+.feature-grid {
+  margin-top: 52px;
+}
+
+.feature-card {
+  min-height: 292px;
+  padding: 26px;
+}
+
+.feature-card h3 {
+  margin-top: 46px;
+}
+
+.demo-grid {
+  gap: 88px;
+}
+
+.demo-copy h2 {
+  margin-top: 18px;
+}
+
+.demo-copy > p {
+  margin-top: 22px;
+}
+
+.demo-link {
+  margin-top: 26px;
+}
+
+.scripture-section {
+  padding-block: 110px;
+}
+
+.values {
+  padding-block: 112px;
+}
+
+.final-cta {
+  gap: 32px;
+  padding: 46px 48px;
+}
+
+.final-cta .button {
+  min-width: 224px;
+  padding-inline: 22px;
+}
+
+.footer {
+  margin-top: 56px;
+}
+
+@media (max-width: 1050px) {
+  .hero {
+    gap: 18px;
+    padding-top: 76px;
+  }
+
+  .demo-grid {
+    gap: 56px;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero {
+    padding-block: 58px 76px;
+  }
+
+  .hero h1 {
+    margin-top: 20px;
+    line-height: 1;
+  }
+
+  .hero-description {
+    margin-top: 22px;
+    line-height: 1.68;
+  }
+
+  .hero-actions {
+    align-items: stretch;
+    gap: 10px;
+    margin-top: 28px;
+  }
+
+  .hero-actions .button {
+    width: 100%;
+    max-width: 310px;
+  }
+
+  .hero-visual {
+    min-height: 560px;
+  }
+
+  .manifesto,
+  .journey,
+  .demo-section,
+  .scripture-section,
+  .values {
+    padding-block: 76px;
+  }
+
+  .manifesto-grid {
+    gap: 30px;
+  }
+
+  .feature-grid {
+    margin-top: 38px;
+  }
+
+  .feature-card {
+    min-height: 248px;
+    padding: 24px;
+  }
+
+  .feature-card h3 {
+    margin-top: 32px;
+  }
+
+  .demo-grid {
+    gap: 44px;
+  }
+
+  .final-cta {
+    gap: 22px;
+    padding: 34px 24px;
+  }
+
+  .final-cta .button {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .footer {
+    margin-top: 44px;
+  }
+}
+
+@media (hover: none) {
+  .button-secondary:hover {
+    border-color: rgba(249, 221, 128, 0.28);
+    background: rgba(249, 221, 128, 0.035);
+  }
+}
