@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 940" preserveAspectRatio="xMidYMid slice" role="img" aria-labelledby="title">
+<title id="title">Moonlit mountain valley with a winding river and fir trees</title>
+<defs>
+ <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#071425"/><stop offset=".56" stop-color="#102e50"/><stop offset="1" stop-color="#25486a"/></linearGradient>
+ <radialGradient id="halo"><stop stop-color="#fff0b9" stop-opacity=".35"/><stop offset=".38" stop-color="#e1cf8d" stop-opacity=".11"/><stop offset="1" stop-color="#f9dd80" stop-opacity="0"/></radialGradient>
+ <linearGradient id="river" x1="0" y1="0" x2="1" y2=".5"><stop stop-color="#23466c"/><stop offset=".4" stop-color="#618bac"/><stop offset=".65" stop-color="#efdaa0"/><stop offset="1" stop-color="#305578"/></linearGradient>
+ <linearGradient id="shade" x2="0" y2="1"><stop stop-color="#000b13" stop-opacity="0"/><stop offset="1" stop-color="#00080e" stop-opacity=".76"/></linearGradient>
+ <g id="pine"><path d="M0 0 15 40 9 38 23 71 15 69 28 106 -28 106 -15 69 -23 71 -9 38 -15 40Z" fill="#071d29"/><path d="M0 0 15 40 9 38 23 71 15 69 28 106H0Z" fill="#123849"/><rect x="-3" y="98" width="6" height="18" fill="#061921"/></g>
+ <g id="stars" fill="#f9dd80"><circle cx="100" cy="78" r="2"/><circle cx="326" cy="160" r="1.6"/><circle cx="460" cy="72" r="1.8"/><circle cx="808" cy="62" r="2.4"/><circle cx="1245" cy="89" r="2.2"/><circle cx="1384" cy="158" r="1.2"/><circle cx="1481" cy="43" r="2"/></g>
+</defs>
+<rect width="1600" height="940" fill="url(#sky)"/>
+<circle cx="1020" cy="249" r="279" fill="url(#halo)"/>
+<circle cx="1020" cy="249" r="69" fill="#fff0b5"/>
+<path d="M989 222 1011 193 1031 215 1050 207 1074 253 1049 280 1010 263Z" fill="#d8cb9a" opacity=".34"/>
+<path d="M1000 263 983 251 996 241 1013 249Z" fill="#d8cb9a" opacity=".26"/>
+<use href="#stars"/><g fill="#e7dbb2" opacity=".75"><circle cx="1150" cy="42" r="1.7"/><circle cx="926" cy="120" r="1.1"/><circle cx="1157" cy="333" r="1.8"/><circle cx="620" cy="211" r="1.7"/></g>
+<path d="M0 380 140 291 257 336 411 203 514 312 610 277 770 429 904 315 1080 416 1227 266 1399 337 1520 240 1600 303V650H0Z" fill="#355789"/>
+<path d="M0 418 142 298 257 342 410 203 515 312 611 277 770 435 903 318 1080 418 1227 269 1403 339 1520 241 1600 303V614H0Z" fill="#1a3c67"/>
+<path d="m328 275 81-72 101 111-67-34-26-48-29 29Z M1169 326l58-57 79 46-49-12-27-18-25 24Z M1460 300l60-59 71 57-49-18-18-19-24 28Z" fill="#7393b6"/>
+<path d="M0 484 174 402 300 498 472 353 620 500 767 417 898 492 1039 405 1168 495 1397 392 1600 479V746H0Z" fill="#183e5b"/>
+<path d="m471 356 146 146-96-56-51-43-38 38Z M1038 407l129 90-80-34-42-31-21 17Z" fill="#45698c"/>
+<path d="M0 548 130 481 297 564 463 481 621 562 771 500 931 552 1123 475 1286 552 1462 470 1600 542V940H0Z" fill="#0a2c3e"/>
+<path d="M0 596 199 550 420 615 621 560 818 638 1090 562 1296 636 1600 538V940H0Z" fill="#143d49"/>
+<path d="M796 543c96 51 191 53 194 85 4 41-110 49-75 85 34 37 257 31 257 84 0 59-304 72-265 143H318c100-40 330-72 437-117 146-62 258-81 194-107-60-25-261-27-218-70 26-26 122-37 133-49 12-15-26-25-68-54Z" fill="url(#river)"/>
+<path d="M810 561c90 51 146 40 142 69-4 24-117 36-80 70 31 29 232 38 239 91 4 39-185 72-278 107 182-44 344-90 286-123-65-36-237-38-218-69 14-22 117-37 92-66-20-23-108-39-183-79Z" fill="#f8de9c" opacity=".54"/>
+<path d="M885 623 961 642 907 656 844 647Z M805 746l121 22-104 21-136-14Z M565 881l217 32-152 16-196-18Z" fill="#d2ddda" opacity=".27"/>
+<path d="M0 690 140 628 283 686 430 654 600 705 690 685 588 750 341 789 0 803Z" fill="#0b2d38"/>
+<path d="M1600 634 1405 615 1300 659 1152 690 1295 720 1490 770 1600 729Z" fill="#0a2935"/>
+<g opacity=".96"><use href="#pine" transform="translate(58 530) scale(1.0)"/><use href="#pine" transform="translate(143 559) scale(.7)"/><use href="#pine" transform="translate(231 590) scale(.9)"/><use href="#pine" transform="translate(322 589) scale(.6)"/><use href="#pine" transform="translate(421 627) scale(.9)"/><use href="#pine" transform="translate(497 616) scale(.65)"/><use href="#pine" transform="translate(575 657) scale(.7)"/><use href="#pine" transform="translate(1228 589) scale(.75)"/><use href="#pine" transform="translate(1340 539) scale(1.1)"/><use href="#pine" transform="translate(1435 528) scale(.85)"/><use href="#pine" transform="translate(1540 480) scale(1.3)"/></g>
+<g opacity=".85"><use href="#pine" transform="translate(65 675) scale(1.65)"/><use href="#pine" transform="translate(190 699) scale(1.4)"/><use href="#pine" transform="translate(342 723) scale(1.16)"/><use href="#pine" transform="translate(1338 701) scale(1.3)"/><use href="#pine" transform="translate(1485 658) scale(1.7)"/><use href="#pine" transform="translate(1591 632) scale(1.85)"/></g>
+<g fill="#f9dd80"><circle cx="122" cy="682" r="4" opacity=".7"/><circle cx="608" cy="500" r="2.7"/><circle cx="1283" cy="508" r="2.9"/><circle cx="1410" cy="778" r="3.4"/><circle cx="685" cy="733" r="2.3"/></g>
+<rect width="1600" height="940" fill="url(#shade)"/>
+</svg>
