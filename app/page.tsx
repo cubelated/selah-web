@@ -1,7 +1,6 @@
 import {
   ArrowRight,
   BookOpen,
-  Check,
   ChevronDown,
   Compass,
   Heart,
@@ -67,7 +66,7 @@ function DownloadLink({ compact = false }: { compact?: boolean }) {
   return (
     <a className={compact ? "sl-button sl-button-small" : "sl-button"} href={PLAY_URL} target="_blank" rel="noopener noreferrer">
       <PlayStoreMark size={compact ? 16 : 19} />
-      <span>{compact ? "Get the app" : "Get the app"}</span>
+      <span>Get the app</span>
       <ArrowRight size={compact ? 15 : 17} aria-hidden="true" />
     </a>
   );
@@ -178,14 +177,12 @@ export default function Home() {
             <span>INSPIRED BY DANIEL</span>
             <h3>21 days</h3>
             <p>Start small. Stay faithful.</p>
-            <span className="sl-journey-indicator" aria-hidden="true"><Check size={18}/></span>
           </article>
           <article className="sl-journey-card sl-journey-40">
             <div className="sl-journey-icon"><Sun size={34} strokeWidth={1.35} aria-hidden="true" /></div>
             <span>INSPIRED BY JESUS&apos; WILDERNESS JOURNEY</span>
             <h3>40 days</h3>
             <p>Make room for growth.</p>
-            <span className="sl-journey-indicator" aria-hidden="true"><Check size={18}/></span>
           </article>
         </div>
       </section>
