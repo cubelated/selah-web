@@ -2348,3 +2348,42 @@ a {
     background: rgba(249, 221, 128, 0.035);
   }
 }
+
+
+/* Selah storefront refresh: real application screens and mobile-first presentation */
+.hero-lead { color: #f6f3f0; font-size: clamp(19px,2.2vw,25px); line-height:1.4; font-weight:500; margin: 22px 0 0; max-width: 540px; }
+.hero-subnote { color:#99978f; font-size:13px; margin:19px 0 0; }
+.phone-real { padding:0; width:min(310px,85%); min-height:0; aspect-ratio:9/16; border-radius:37px; background:#0d1016; box-shadow:0 38px 90px rgba(0,0,0,.5),0 0 0 1px rgba(249,221,128,.13); }
+.phone-real img { display:block; width:100%; height:100%; object-fit:cover; }
+.phone-real::after { pointer-events:none; border-radius:inherit; }
+.hero-float-note { position:absolute; z-index:4; right:0; bottom:105px; display:flex; align-items:center; gap:9px; padding:15px 18px; border:1px solid rgba(249,221,128,.22); border-radius:16px; color:#f9dd80; background:rgba(25,26,30,.94); box-shadow:0 15px 38px rgba(0,0,0,.3); font-size:13px; }
+.bible-screenshot-visual { isolation:isolate; }
+.bible-screenshot-visual > img { width:min(310px,77%); height:auto; aspect-ratio:9/16; border:5px solid #0b0c0f; object-fit:cover; border-radius:32px; box-shadow:0 35px 80px rgba(0,0,0,.4),0 0 0 1px rgba(249,221,128,.19); }
+.app-gallery-section { padding:110px 0 120px; background:#17181c; border-block:1px solid rgba(246,243,240,.07); }
+.app-gallery-header { display:grid; grid-template-columns:minmax(0,1fr) minmax(220px,360px); gap:48px; align-items:end; }
+.app-gallery-header h2 { font-family:Georgia,"Times New Roman",serif; font-size:clamp(43px,5vw,70px); font-weight:400; letter-spacing:-.045em; line-height:1.1; margin:17px 0 0; max-width:740px; }
+.app-gallery-header > p { color:#b5b2ac; font-size:16px; line-height:1.8; margin:0 0 4px; }
+.app-gallery-scroll { display:flex; gap:20px; margin-top:52px; overflow-x:auto; overflow-y:hidden; padding:3px 3px 25px; scroll-snap-type:x mandatory; scrollbar-width:thin; scrollbar-color:#6e6547 transparent; }
+.app-gallery-item { flex:0 0 clamp(174px,19vw,225px); scroll-snap-align:start; margin:0; }
+.app-gallery-image { aspect-ratio:9/16; overflow:hidden; border-radius:20px; border:1px solid rgba(249,221,128,.18); background:#0d1118; box-shadow:0 17px 35px rgba(0,0,0,.25); transition:transform .24s ease,border-color .24s ease; }
+.app-gallery-image img { display:block; width:100%; height:100%; object-fit:cover; }
+.app-gallery-item figcaption { margin-top:17px; color:#e9e6dd; font-size:13px; text-align:center; }
+.app-gallery-hint { display:flex; justify-content:flex-end; align-items:center; gap:9px; color:#a8a59e; font-size:12px; margin:8px 0 0; }
+.app-gallery-scroll:focus-visible { outline:2px solid #f9dd80; outline-offset:3px; }
+@media(hover:hover) { .app-gallery-item:hover .app-gallery-image { transform:translateY(-5px); border-color:rgba(249,221,128,.48); } }
+@media(max-width:1050px) { .app-gallery-header { gap:28px; } .hero-float-note { right:-5px; } }
+@media(max-width:720px) {
+  .hero-lead { font-size:20px; margin-top:23px; }
+  .hero-subnote { margin-top:17px; }
+  .hero-visual { transform:none; min-height:565px; }
+  .phone-real { width:min(285px,75vw); }
+  .hero-float-note { right:0; bottom:32px; font-size:11px; padding:12px; }
+  .bible-screenshot-visual > img { width:min(290px,77%); height:auto; }
+  .app-gallery-section { padding:76px 0; }
+  .app-gallery-header { grid-template-columns:1fr; gap:15px; }
+  .app-gallery-header h2 { font-size:clamp(40px,10vw,55px); }
+  .app-gallery-header > p { font-size:15px; }
+  .app-gallery-scroll { gap:14px; margin-top:34px; margin-right:-16px; padding-right:16px; }
+  .app-gallery-item { flex-basis:185px; }
+}
+@media(prefers-reduced-motion:reduce){ .app-gallery-image { transition:none; } }
