@@ -12,44 +12,51 @@ import {
   ShieldCheck,
   Sparkles,
   Volume2,
+  SlidersHorizontal,
 } from "lucide-react";
 
 const features = [
   {
-    icon: Pause,
+    icon: Heart,
     number: "01",
-    title: "Arrive slowly",
-    description:
-      "Begin with a gentle check-in that helps you notice what you are carrying before you read.",
+    title: "Arrive as you are",
+    description: "Pause for a wellbeing check-in and gratitude before beginning your time with God.",
   },
   {
     icon: BookOpen,
     number: "02",
-    title: "Open your Bible",
-    description:
-      "Selah guides the session, then asks you to put the phone down and spend time in a physical Bible.",
+    title: "Stay with Scripture",
+    description: "Open your own physical or digital Bible and read at your own pace. Selah is a guide, not a replacement.",
   },
   {
     icon: PenLine,
     number: "03",
-    title: "Reflect honestly",
-    description:
-      "Thoughtful prompts help you respond to Scripture in your own words, without rushing to the next screen.",
+    title: "Reflect and pray",
+    description: "Respond to the Word with reflection, prayer, and personal journaling prompts.",
   },
   {
     icon: Leaf,
     number: "04",
-    title: "Grow quietly",
-    description:
-      "Finish with a simple journal entry and a visible journey that celebrates growth, not pressure.",
+    title: "Grow in consistency",
+    description: "Take your quiet time one day at a time, with a guided 21- or 40-day journey.",
   },
 ];
 
 const principles = [
-  "Your journal stays on your device",
-  "No competitive streak pressure",
-  "No core devotional features locked",
-  "Designed to support—not replace—Scripture",
+  "A companion to your physical or digital Bible",
+  "Journal entries saved on your device",
+  "A calm, adaptable devotional rhythm",
+  "Built for time with God, not time spent scrolling",
+];
+
+const screenGallery = [
+  { src: "https://play-lh.googleusercontent.com/gIc1VinHzkzKW1eSI93rolmi_GY6IPmE4PCXT5Wlrn_9nfBKJ_0BkPSIOqBACUEMm8hASQbzTTT7jkQIPvmXzOo=w720-h1280", title: "Begin your day", alt: "Selah Today screen with moonlit mountains and a Start Session button" },
+  { src: "https://play-lh.googleusercontent.com/m8SY41nuGrQAL-RBFagyzMeZcNQ9OIkCQCs6WzwLVa6p4h9DHYhu9jkFZOyC33ZkF_aktZjTVE_ZMVutfOAkyQ=w720-h1280", title: "Arrive as you are", alt: "Wellbeing check-in in the Selah devotion flow" },
+  { src: "https://play-lh.googleusercontent.com/0GVfZSrUEuMp5998xfoHWkTCmG90gZD3u9ecxFFgFWG4NJb2seCA2VBaX-fgnp9b0MMVaqjVfwO5kQbkGuuW=w720-h1280", title: "Open your Bible", alt: "Selah asks you to prepare a physical or digital Bible" },
+  { src: "https://play-lh.googleusercontent.com/sIFDmR17xIABBc7EBVeev_WuRXvH5arN6Swtue_oHOU01P8hm_chOU07aMUhKm_TeU5emrCEve1ndjP9Ob4IvQ=w720-h1280", title: "Reflect on the Word", alt: "Reflection prompt in a guided Selah session" },
+  { src: "https://play-lh.googleusercontent.com/s1sRCeXkyUb-MjL82nOAqeVRY1i3dL7iDawCCnQnSTsO_6I23CGaJJW7ztCw4UpgOr3O2n4iB05y6lEfaWCj=w720-h1280", title: "Your own rhythm", alt: "Customizable order of devotional session steps" },
+  { src: "https://play-lh.googleusercontent.com/DiOyM01oAy2KG0FVn_FbwrxYyhvlrGHs_TJWL25ETCO9Bmk_LIHZLAPeXyh7PzWGKvRMgwYq-MuuRhoK8bqgVA=w720-h1280", title: "See your journey", alt: "Day-by-day journey progress in Selah" },
+  { src: "https://play-lh.googleusercontent.com/8HF0Z5AWSTjcJ-ubpB8uKqHABrm-ZRfOIsDwWtP8LmV9wdEY04mi647Y8Ch6vhEuCU-gNOAUHfssqTQSkoIeJw=w720-h1280", title: "Grow with grace", alt: "Fig tree imagery representing growth in Selah" },
 ];
 
 function GooglePlayIcon({ size = 18 }: { size?: number }) {
@@ -83,7 +90,8 @@ export default function Home() {
 
         <div className="nav-links">
           <a href="#why-selah">Why Selah</a>
-          <a href="#journey">The journey</a>
+          <a href="#journey">How it works</a>
+          <a href="#screenshots">App preview</a>
           <a href="#demo">Demo</a>
           <a href="#values">Our values</a>
         </div>
@@ -103,90 +111,50 @@ export default function Home() {
         <div className="hero-copy">
           <div className="eyebrow">
             <Sparkles size={15} aria-hidden="true" />
-            A guided rhythm for time with God
+            A GUIDED DEVOTIONAL COMPANION
           </div>
-
-          <h1>
-            Pause the noise.
-            <span>Return to Scripture.</span>
+          <h1 aria-label="Pause. Praise. Pray.">
+            Pause.<span>Praise. Pray.</span>
           </h1>
-
+          <p className="hero-lead">Build your daily devotional habit with God.</p>
           <p className="hero-description">
-            Selah gently guides you through arriving, gratitude, Bible
-            reading, reflection, and prayer—without replacing the Bible in your
-            hands.
+            Selah helps you step away from the distractions of everyday life and spend intentional time with God through His Word. Begin a calm, guided rhythm of gratitude, Scripture, reflection, prayer, and journaling.
           </p>
-
           <div className="hero-actions">
             <a
               className="button"
               href="https://play.google.com/store/apps/details?id=com.cubelated.selah"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Download Selah on Google Play"
+              aria-label="Get Selah on Google Play"
             >
               <GooglePlayIcon size={19} />
-              Download on Google Play
+              Get it on Google Play
             </a>
-            <a className="button button-secondary" href="#demo">
-              <Play size={17} aria-hidden="true" fill="currentColor" />
-              Watch the demo
+            <a className="button button-secondary" href="#screenshots">
+              Explore the app
+              <ArrowRight size={17} aria-hidden="true" />
             </a>
           </div>
+          <p className="hero-subnote">A few quiet moments, at your own pace.</p>
         </div>
 
-        <div className="hero-visual" aria-label="Selah devotional session preview">
+        <div className="hero-visual" aria-label="Selah daily devotional app preview">
           <div className="orbit orbit-one" aria-hidden="true" />
           <div className="orbit orbit-two" aria-hidden="true" />
-          <div className="verse-card">
-            <span>PSALM 1:3</span>
-            <p>“Like a tree planted by streams of water...”</p>
+          <div className="phone phone-real">
+            <img
+              src={"https://play-lh.googleusercontent.com/gIc1VinHzkzKW1eSI93rolmi_GY6IPmE4PCXT5Wlrn_9nfBKJ_0BkPSIOqBACUEMm8hASQbzTTT7jkQIPvmXzOo=w720-h1280"}
+              alt="The real Selah Today screen featuring a moonlit mountain landscape, daily journey progress and Start Session"
+              width="720"
+              height="1280"
+              fetchPriority="high"
+              decoding="async"
+            />
           </div>
-
-          <div className="phone">
-            <div className="phone-top">
-              <span>9:41</span>
-              <div className="phone-notch" />
-              <Volume2 size={15} aria-hidden="true" />
-            </div>
-            <div className="session-label">TODAY&apos;S SELAH</div>
-            <div className="logo-stage">
-              <div className="logo-glow" aria-hidden="true" />
-              <img
-                src="/selah-logo.webp"
-                alt="Selah seedling and path icon"
-                width="1024"
-                height="1024"
-              />
-            </div>
-            <p className="session-kicker">A moment to be still</p>
-            <h2>How is your heart today?</h2>
-            <div className="mood-row" aria-hidden="true">
-              <span>weary</span>
-              <span className="mood-selected">present</span>
-              <span>hopeful</span>
-            </div>
-            <div className="phone-cta">
-              Begin quietly
-              <ArrowRight size={16} />
-            </div>
-          </div>
-
-          <div className="audio-card">
-            <div className="audio-icon">
-              <Headphones size={18} aria-hidden="true" />
-            </div>
-            <div>
-              <span>AMBIENCE</span>
-              <p>Still waters</p>
-            </div>
-            <div className="wave" aria-hidden="true">
-              <i />
-              <i />
-              <i />
-              <i />
-              <i />
-            </div>
+          <div className="hero-float-note" aria-hidden="true">
+            <Leaf size={17} />
+            <span>Grow one day at a time</span>
           </div>
         </div>
       </section>
@@ -199,14 +167,11 @@ export default function Home() {
           </div>
           <div>
             <p className="manifesto-quote">
-              Most apps want more of your attention. Selah is built to help you
-              give your attention <em>somewhere else.</em>
+              Life is busy, and quiet time can be difficult to keep. Selah exists to
+              make room for <em>a daily journey with God.</em>
             </p>
             <p className="manifesto-body">
-              The name comes from a small word found throughout the Psalms: a
-              pause, a breath, a moment to consider. Selah brings that same
-              rhythm into your devotional time—calm guidance when you need it,
-              silence when you do not.
+              Born from a desire to help Christians find consistency in the middle of busy days, Selah offers gentle structure without taking the place of the Bible. Bring your own Bible, move at your own pace, and let each session lead you back to the Word.
             </p>
           </div>
         </div>
@@ -218,10 +183,9 @@ export default function Home() {
             <Feather size={15} aria-hidden="true" />
             A simple daily rhythm
           </div>
-          <h2>From distraction to devotion.</h2>
+          <h2>Small moments. A meaningful rhythm.</h2>
           <p>
-            Four intentional moments that guide your attention toward
-            Scripture—not another checklist to complete.
+            Each guided session creates space for a wellbeing check-in, gratitude, Bible reading, reflection, prayer, and journaling. The flow is yours to adapt.
           </p>
         </div>
 
@@ -241,6 +205,29 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="app-gallery-section" id="screenshots" aria-labelledby="app-gallery-heading">
+        <div className="shell">
+          <div className="app-gallery-header">
+            <div>
+              <div className="eyebrow"><Sparkles size={15} aria-hidden="true" /> INSIDE SELAH</div>
+              <h2 id="app-gallery-heading">A peaceful space for your quiet time.</h2>
+            </div>
+            <p>Discover the app through real screens: from the first moment of stillness to Scripture, reflection, and growth.</p>
+          </div>
+          <div className="app-gallery-scroll" aria-label="Screenshots of the Selah Android app" tabIndex={0}>
+            {screenGallery.map((screen) => (
+              <figure className="app-gallery-item" key={screen.title}>
+                <div className="app-gallery-image">
+                  <img src={screen.src} alt={screen.alt} width="720" height="1280" loading="lazy" decoding="async" />
+                </div>
+                <figcaption>{screen.title}</figcaption>
+              </figure>
+            ))}
+          </div>
+          <p className="app-gallery-hint">Scroll or swipe to explore more screens <ArrowRight size={16} aria-hidden="true" /></p>
+        </div>
+      </section>
+
       <section className="demo-section" id="demo">
         <div className="shell demo-grid">
           <div className="demo-copy">
@@ -248,11 +235,9 @@ export default function Home() {
               <Play size={15} aria-hidden="true" fill="currentColor" />
               See Selah in practice
             </div>
-            <h2>See the whole devotional rhythm.</h2>
+            <h2>A look inside a Selah session.</h2>
             <p>
-              Follow a complete Selah session—from preparing your Bible and
-              arriving quietly to reading, reflecting, praying, and carrying
-              one truth into your day.
+              See how the app guides you from arriving and gratitude to opening your Bible, reflecting on Scripture, and ending in prayer.
             </p>
             <a
               className="demo-link"
@@ -282,19 +267,17 @@ export default function Home() {
 
       <section className="scripture-section">
         <div className="shell scripture-grid">
-          <div className="growth-visual">
+          <div className="growth-visual bible-screenshot-visual">
             <div className="growth-ring ring-one" aria-hidden="true" />
             <div className="growth-ring ring-two" aria-hidden="true" />
             <img
-              src="/selah-logo.webp"
-              alt="A gold seedling growing beside a path"
-              width="1024"
-              height="1024"
+              src={"https://play-lh.googleusercontent.com/0GVfZSrUEuMp5998xfoHWkTCmG90gZD3u9ecxFFgFWG4NJb2seCA2VBaX-fgnp9b0MMVaqjVfwO5kQbkGuuW=w720-h1280"}
+              alt="Selah prompts you to have your own Bible ready before your session"
+              width="720"
+              height="1280"
+              loading="lazy"
+              decoding="async"
             />
-            <div className="growth-caption">
-              <Leaf size={17} aria-hidden="true" />
-              <span>Rooted. Nourished. Growing.</span>
-            </div>
           </div>
 
           <div className="scripture-copy">
@@ -302,11 +285,9 @@ export default function Home() {
               <BookOpen size={15} aria-hidden="true" />
               Scripture stays central
             </div>
-            <h2>Your phone is the doorway, not the destination.</h2>
+            <h2>Your Bible stays at the heart of it.</h2>
             <p>
-              Selah intentionally asks you to set the screen aside and open a
-              physical Bible. The app holds the structure of the session so you
-              can give your full attention to the text in front of you.
+              Selah is designed to guide you, not replace Scripture. Read using a physical or digital Bible of your choice, at your own pace. The app helps structure the moments around reading with thoughtful prompts, reflection, and prayer.
             </p>
             <div className="scripture-note">
               <span>“</span>
@@ -326,10 +307,9 @@ export default function Home() {
             <Heart size={15} aria-hidden="true" />
             Built with conviction
           </div>
-          <h2>Healthy devotion over hollow engagement.</h2>
+          <h2>Your time with God, without the noise.</h2>
           <p>
-            Selah is not designed to keep you scrolling. Every choice starts
-            with one question: does this help someone be more present with God?
+            A simple way to build a consistent devotional habit in everyday life—without making the app itself the focus.
           </p>
         </div>
 
@@ -359,11 +339,10 @@ export default function Home() {
           <img src="/selah-logo.webp" alt="" width="512" height="512" />
         </div>
         <div className="cta-content">
-          <span>NOW ON GOOGLE PLAY</span>
-          <h2>Make room for Scripture today.</h2>
+          <span>AVAILABLE ON GOOGLE PLAY</span>
+          <h2>Make room for God today.</h2>
           <p>
-            Download Selah for Android and begin a guided devotional rhythm that
-            leads you away from the screen and back to your own Bible.
+            Pause. Praise. Pray. Start your daily devotional journey with guided check-ins, Scripture reading, prayer, reflection, and journaling.
           </p>
         </div>
         <a
