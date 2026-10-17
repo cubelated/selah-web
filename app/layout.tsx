@@ -4,9 +4,9 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://selah.cubelated.com"),
   applicationName: "Selah",
-  title: "Selah | Guided Bible Devotional Companion",
+  title: "Selah | Pause. Praise. Pray.",
   description:
-    "Selah gently guides you to pause, open your physical Bible, reflect, pray, and carry Scripture into your day.",
+    "Build your daily devotional habit with God. Pause. Praise. Pray. Guided gratitude, Bible reading, reflection, prayer, and journaling.",
   icons: {
     icon: [
       {
@@ -19,18 +19,18 @@ export const metadata: Metadata = {
     apple: "/selah-logo.webp",
   },
   openGraph: {
-    title: "Selah | Guided Bible Devotional Companion",
+    title: "Selah | Pause. Praise. Pray.",
     description:
-      "A quiet devotional rhythm that guides you back to Scripture, reflection, and prayer.",
+      "Build your daily devotional habit with God. Pause. Praise. Pray. Read your Bible, reflect, journal, and grow one day at a time.",
     url: "https://selah.cubelated.com",
     siteName: "Selah",
     type: "website",
   },
   twitter: {
     card: "summary",
-    title: "Selah | Guided Bible Devotional Companion",
+    title: "Selah | Pause. Praise. Pray.",
     description:
-      "A quiet devotional rhythm that guides you back to Scripture, reflection, and prayer.",
+      "Build your daily devotional habit with God. Pause. Praise. Pray. Read your Bible, reflect, journal, and grow one day at a time.",
   },
 };
 
