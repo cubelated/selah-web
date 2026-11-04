@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://selah.cubelated.com"),
   applicationName: "Selah",
-  title: "Selah | Pause. Praise. Pray.",
+  title: "Selah - Pause. Praise. Pray",
   description:
     "Build your daily devotional habit with God. Pause. Praise. Pray. Guided gratitude, Bible reading, reflection, prayer, and journaling.",
   icons: {
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     apple: "/selah-logo.webp",
   },
   openGraph: {
-    title: "Selah | Pause. Praise. Pray.",
+    title: "Selah - Pause. Praise. Pray",
     description:
       "Build your daily devotional habit with God. Pause. Praise. Pray. Read your Bible, reflect, journal, and grow one day at a time.",
     url: "https://selah.cubelated.com",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "Selah | Pause. Praise. Pray.",
+    title: "Selah - Pause. Praise. Pray",
     description:
       "Build your daily devotional habit with God. Pause. Praise. Pray. Read your Bible, reflect, journal, and grow one day at a time.",
   },
