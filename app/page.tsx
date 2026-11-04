@@ -6,6 +6,7 @@ import {
   Heart,
   Leaf,
   NotebookPen,
+  Play,
   Sprout,
   Sunrise,
   Sun,
@@ -14,6 +15,7 @@ import {
 import "./landing.css";
 
 const PLAY_URL = "https://play.google.com/store/apps/details?id=com.cubelated.selah";
+const DEMO_URL = "https://www.youtube.com/shorts/69-QQakhELg";
 const screenshots = {
   today: "https://play-lh.googleusercontent.com/gIc1VinHzkzKW1eSI93rolmi_GY6IPmE4PCXT5Wlrn_9nfBKJ_0BkPSIOqBACUEMm8hASQbzTTT7jkQIPvmXzOo=w720-h1280",
   arrive: "https://play-lh.googleusercontent.com/m8SY41nuGrQAL-RBFagyzMeZcNQ9OIkCQCs6WzwLVa6p4h9DHYhu9jkFZOyC33ZkF_aktZjTVE_ZMVutfOAkyQ=w720-h1280",
@@ -99,6 +101,7 @@ export default function Home() {
             <a href="#features">Features</a>
             <a href="#journey">Journey</a>
             <a href="#preview">Preview</a>
+            <a href="#demo">Demo</a>
             <a href="#faq">FAQ</a>
           </nav>
           <DownloadLink compact />
@@ -112,6 +115,10 @@ export default function Home() {
             <p className="sl-hero-caption">Read. Reflect. Pray.</p>
             <div className="sl-hero-actions">
               <DownloadLink />
+              <a className="sl-outline-button" href="#demo">
+                <Play size={17} fill="currentColor" aria-hidden="true" />
+                Watch demo
+              </a>
             </div>
           </div>
           <div className="sl-hero-phone">
@@ -200,6 +207,35 @@ export default function Home() {
           </div>
           <img className="sl-growth-art" src={screenshots.grow} alt="Fig tree growing as a metaphor for the devotional journey in Selah" width="720" height="1280" loading="lazy" decoding="async" />
         </article>
+      </section>
+
+      <section className="sl-demo sl-container" id="demo" aria-labelledby="demo-title">
+        <div className="sl-demo-copy">
+          <span className="sl-kicker">SEE SELAH IN ACTION</span>
+          <h2 id="demo-title">A quiet time, guided.</h2>
+          <p>
+            See how Selah helps you pause, open Scripture, reflect, and pray.
+          </p>
+          <a
+            className="sl-text-link"
+            href={DEMO_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Watch on YouTube
+            <ArrowRight size={18} aria-hidden="true" />
+          </a>
+        </div>
+        <div className="sl-demo-frame">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/69-QQakhELg?rel=0"
+            loading="lazy"
+            title="Selah guided devotional app demo"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          />
+        </div>
       </section>
 
       <section className="sl-faq sl-container" id="faq" aria-labelledby="faq-title">
